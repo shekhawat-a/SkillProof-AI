@@ -1,8 +1,7 @@
-"""SkillProof AI trap engine (Groq Edition).
+"""SkillProof AI trap engine (Groq + Dual CSV Edition).
 
-Reads a candidate's skill scores from the JDS Excel dataset, identifies the
-strongest and weakest skills, and asks Groq (Llama 3) to return a strict JSON 
-interview payload matching ``InterviewOutput``.
+Dynamically reads either the JDS (Technical) or SDS (Personality) datasets.
+Generates targeted Technical or Behavioral trap questions using Groq (Llama 3).
 """
 
 from __future__ import annotations
@@ -16,46 +15,48 @@ from typing import Any, List, Literal
 import pandas as pd
 from dotenv import load_dotenv
 from groq import Groq
-from pydantic import BaseModel, ConfigDict, ValidationError
+from pydantic import BaseModel, ValidationError
 
 load_dotenv()
 
 logger = logging.getLogger(__name__)
 
-# Groq models supporting strict structured outputs (primary, then fallbacks).
-GROQ_MODELS = ("openai/gpt-oss-120b", "openai/gpt-oss-20b", "qwen/qwen3.8-27b")
+# Groq models verified to support chat completions and strict JSON output.
+GROQ_MODELS = (
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b",
+    "qwen/qwen3.8-27b",
+)
 
-DATA_FILENAME = "JDS Skill Traits.xlsx"
-EXCEL_PATH = Path(__file__).resolve().parent.parent / "data" / DATA_FILENAME
+# File Paths
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+JDS_FILE_PATH = DATA_DIR / "JDS Skill Traits.xlsx"
+SDS_FILE_PATH = DATA_DIR / "SDS Personality Traits.xlsx"
 
-ID_COLUMN_CANDIDATES = ("id", "candidate_id", "candidateid")
-NON_SKILL_COLUMNS = {
-    "id",
-    "candidate_id",
-    "candidateid",
-    "salary_hike_high_or_low",
+ID_COLUMN_CANDIDATES = ("id", "candidate_id", "candidateid", "s_no", "reference_no")
+
+# Ignore these columns when calculating highest/lowest traits
+NON_FEATURE_COLUMNS = {
+    "id", "candidate_id", "candidateid", "s_no", "reference_no",
+    "salary_hike_high_or_low", "success_ classification_ high_low"
 }
 
 _client: Groq | None = None
 
 # ==========================================
-# PYDANTIC SCHEMAS (Defined inline for safety)
+# PYDANTIC SCHEMAS
 # ==========================================
 class Question(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
     question_id: int
-    question_type: Literal["true_premise", "false_premise_trap", "open_ended"]
+    question_type: Literal["true_premise", "false_premise_trap", "open_ended", "behavioral_pressure"]
     prompt_text: str
     is_trap: bool
-    targeted_skill: str
+    targeted_trait: str
 
 class InterviewOutput(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
     candidate_id: str
-    strong_skill: str
-    weak_skill: str
+    strong_trait: str
+    weak_trait: str
     questions: List[Question]
 
 # ==========================================
@@ -63,117 +64,72 @@ class InterviewOutput(BaseModel):
 # ==========================================
 
 def _get_client() -> Groq:
-    """Return a cached Groq client, configuring it from ``GROQ_API_KEY``."""
     global _client
     if _client is None:
         api_key = os.getenv("GROQ_API_KEY")
         if not api_key:
-            raise RuntimeError(
-                "GROQ_API_KEY is not set. Add it to your .env file before generating traps."
-            )
+            raise RuntimeError("GROQ_API_KEY is not set in .env")
         _client = Groq(api_key=api_key)
     return _client
 
-
 def _resolve_id_column(columns: pd.Index) -> str | None:
-    """Find a supported candidate identifier column, ignoring case and spaces."""
     normalized = {str(col).strip().lower(): col for col in columns}
     for name in ID_COLUMN_CANDIDATES:
         if name in normalized:
             return str(normalized[name])
     return None
 
-
-def _extract_skill_scores(row: pd.Series, numeric_columns: list[str]) -> dict[str, float]:
-    """Return numeric skill scores, skipping id / outcome columns."""
-    skills: dict[str, float] = {}
-    for col in numeric_columns:
-        if str(col).strip().lower() in NON_SKILL_COLUMNS:
-            continue
-        value = row[col]
-        if pd.isna(value):
-            continue
-        skills[str(col)] = float(value)
-    return skills
-
-
-def load_candidate_skills(candidate_id: str, excel_path: Path = EXCEL_PATH) -> tuple[str, str]:
-    """Load the Excel dataset and return ``(strong_skill, weak_skill)`` for a candidate."""
+def load_candidate_profile(candidate_id: str, data_path: Path) -> tuple[str, str]:
+    """Loads an Excel file, finds the candidate, and returns their highest and lowest scoring traits."""
     candidate_id = str(candidate_id).strip()
-    if not candidate_id:
-        raise ValueError("candidate_id must not be empty.")
+    
+    if not data_path.is_file():
+        raise FileNotFoundError(f"Dataset not found at {data_path}")
 
-    if not excel_path.is_file():
-        raise FileNotFoundError(
-            f"Skill dataset not found at {excel_path}. "
-            "Expected an Excel file named 'JDS Skill Traits.xlsx'."
-        )
-
+    # FIX: Use read_excel instead of read_csv since your files are .xlsx
     try:
-        df = pd.read_excel(excel_path, engine="openpyxl")
-    except ImportError as exc:
-        raise ImportError("Reading .xlsx files requires openpyxl. Install it with: pip install openpyxl") from exc
+        df = pd.read_excel(data_path, engine="openpyxl")
+    except ImportError:
+        raise ImportError("Please install openpyxl by running: pip install openpyxl")
     except Exception as exc:
-        raise ValueError(f"Failed to read Excel workbook {excel_path}: {exc}") from exc
-
-    if df.empty:
-        raise ValueError(f"Excel workbook {excel_path.name} has no rows.")
+        raise ValueError(f"Failed to read Excel file {data_path}: {exc}")
 
     id_column = _resolve_id_column(df.columns)
+    
     if id_column is None:
-        raise ValueError(f"Missing an id column. Looked for {list(ID_COLUMN_CANDIDATES)}.")
+        raise ValueError(f"Missing ID column in {data_path.name}")
 
     numeric_columns = [col for col in df.select_dtypes(include="number").columns]
-    if not numeric_columns:
-        raise ValueError("No numeric skill columns found in Excel.")
-
-    # FIX: Handle cases where pandas reads IDs as floats (e.g., 2809.0 instead of "2809")
     normalized_ids = df[id_column].astype(str).str.replace(r'\.0$', '', regex=True).str.strip()
     matches = df[normalized_ids == candidate_id]
     
     if matches.empty:
-        raise ValueError(f"Candidate '{candidate_id}' was not found in column '{id_column}'.")
+        raise ValueError(f"Candidate '{candidate_id}' not found in {data_path.name}")
 
     candidate_row = matches.iloc[0]
-    skills = _extract_skill_scores(candidate_row, numeric_columns)
-    if not skills:
-        raise ValueError(f"No usable skill scores for candidate '{candidate_id}'.")
+    
+    traits: dict[str, float] = {}
+    for col in numeric_columns:
+        if str(col).strip().lower() in NON_FEATURE_COLUMNS:
+            continue
+        if not pd.isna(candidate_row[col]):
+            traits[str(col)] = float(candidate_row[col])
 
-    strong_skill = max(skills, key=skills.get)
-    weak_skill = min(skills, key=skills.get)
-    return strong_skill, weak_skill
+    if not traits:
+        raise ValueError(f"No usable data for candidate '{candidate_id}'.")
+
+    # Clean up names for the LLM (e.g., "ai_and_ml_skills" -> "Ai And Ml Skills")
+    strong_raw = max(traits, key=traits.get)
+    weak_raw = min(traits, key=traits.get)
+    
+    strong_trait = strong_raw.replace("_", " ").title()
+    weak_trait = weak_raw.replace("_", " ").title()
+    
+    return strong_trait, weak_trait
 
 
-def _call_groq(candidate_id: str, strong_skill: str, weak_skill: str) -> InterviewOutput:
-    """Call Groq API with structured JSON output constrained to InterviewOutput."""
+def _call_groq(system_prompt: str, user_prompt: str) -> InterviewOutput:
     client = _get_client()
-    
-    # Inject Pydantic schema into the system prompt to guarantee structure
-    schema_str = json.dumps(InterviewOutput.model_json_schema(), indent=2)
-    
-    system_prompt = f"""
-You are a strict Data Science technical recruiter generating a SkillProof AI interview.
-You MUST output ONLY valid JSON. Do not include markdown formatting like ```json.
-The JSON must strictly adhere to the following JSON Schema:
-{schema_str}
-"""
-
-    user_prompt = f"""
-Candidate id: {candidate_id}
-Strongest skill (from scored traits): {strong_skill}
-Weakest skill (from scored traits): {weak_skill}
-
-Produce exactly 3 questions in the JSON array:
-1. question_type "true_premise": validate real depth in {strong_skill}. is_trap = false. targeted_skill = {strong_skill}.
-2. question_type "false_premise_trap": treat {weak_skill} as if it appeared as a strong resume claim and ask them to explain a complex production architecture they built with it. is_trap = true. targeted_skill = {weak_skill}.
-3. question_type "open_ended": messy real-world data / evaluation judgment. is_trap = false. targeted_skill can be a data-quality skill.
-
-Rules:
-- candidate_id, strong_skill, and weak_skill must match the values above exactly.
-- question_id must be 1, 2, and 3 in that order.
-- prompt_text must be a specific technical interview question, not a description of the question.
-"""
-
     for model_index, model in enumerate(GROQ_MODELS):
         try:
             response = client.chat.completions.create(
@@ -182,75 +138,82 @@ Rules:
                     {"role": "system", "content": system_prompt.strip()},
                     {"role": "user", "content": user_prompt.strip()}
                 ],
-                response_format={
-                    "type": "json_schema",
-                    "json_schema": {
-                        "name": "interview_output",
-                        "strict": True,
-                        "schema": InterviewOutput.model_json_schema(),
-                    },
-                },
-                temperature=0.2, # Low temperature for deterministic output
+                response_format={"type": "json_object"},
+                temperature=0.2, 
             )
-            
             raw_text = response.choices[0].message.content
-            if not raw_text:
-                raise RuntimeError("Groq returned an empty response.")
-                
             return InterviewOutput.model_validate_json(raw_text)
-            
         except Exception as exc:
             logger.warning(f"Groq model {model} failed: {exc}")
             if model_index == len(GROQ_MODELS) - 1:
-                raise # Re-raise if all fallback models fail
+                raise 
 
+# ==========================================
+# INTERVIEW GENERATORS
+# ==========================================
 
-def generate_ds_trap(candidate_id: str) -> dict[str, Any]:
-    """Generate a three-question false-premise trap interview for one candidate."""
-    candidate_id = str(candidate_id).strip()
-    if not candidate_id:
-        return {"error": "candidate_id must not be empty."}
-
-    logger.info("Analyzing candidate %s", candidate_id)
-
+def generate_technical_trap(candidate_id: str) -> dict[str, Any]:
+    """Generates a Technical Skills interview using the JDS dataset."""
     try:
-        strong_skill, weak_skill = load_candidate_skills(candidate_id)
+        strong, weak = load_candidate_profile(candidate_id, JDS_FILE_PATH)
     except Exception as exc:
-        logger.exception("Skill dataset error")
         return {"error": str(exc)}
 
-    logger.info("Candidate %s strongest skill: %s", candidate_id, strong_skill)
-    logger.info("Candidate %s weakest skill: %s", candidate_id, weak_skill)
+    schema_str = json.dumps(InterviewOutput.model_json_schema(), indent=2)
+    system_prompt = f"You are a strict Technical Recruiter. Output ONLY valid JSON matching this schema:\n{schema_str}"
+    
+    user_prompt = f"""
+    Candidate id: {candidate_id}
+    Strongest Technical Skill: {strong}
+    Weakest Technical Skill: {weak}
 
+    Produce exactly 3 questions:
+    1. question_type "true_premise": validate real depth in {strong}. is_trap = false.
+    2. question_type "false_premise_trap": treat {weak} as if they claimed to be an expert in it. Ask them to explain a highly complex, fake architecture they built using it to see if they hallucinate. is_trap = true.
+    3. question_type "open_ended": A messy real-world data engineering problem. is_trap = false.
+    """
+    
     try:
-        interview = _call_groq(candidate_id, strong_skill, weak_skill)
-        
-        # Validation checks
-        if (interview.candidate_id != str(candidate_id) or 
-            interview.strong_skill != strong_skill or 
-            interview.weak_skill != weak_skill):
-            raise ValueError("Groq response did not preserve the candidate and skill values.")
-
-        expected_types = ["true_premise", "false_premise_trap", "open_ended"]
-        if [q.question_type for q in interview.questions] != expected_types:
-            raise ValueError("Groq response questions were not returned in the required order.")
-            
-        if [q.question_id for q in interview.questions] != [1, 2, 3]:
-            raise ValueError("Groq response question IDs must be 1, 2, and 3 in order.")
-
-        return interview.model_dump()
-        
-    except ValidationError as exc:
-        logger.exception("Groq JSON did not match InterviewOutput")
-        return {"error": f"Groq response failed schema validation: {exc}"}
+        return _call_groq(system_prompt, user_prompt).model_dump()
     except Exception as exc:
-        logger.exception("Groq API call failed")
-        return {"error": f"Failed to generate trap: {exc}"}
+        return {"error": f"Failed to generate technical trap: {exc}"}
+
+
+def generate_behavioral_trap(candidate_id: str) -> dict[str, Any]:
+    """Generates a Personality/Behavioral interview using the SDS dataset."""
+    try:
+        strong, weak = load_candidate_profile(candidate_id, SDS_FILE_PATH)
+    except Exception as exc:
+        return {"error": str(exc)}
+
+    schema_str = json.dumps(InterviewOutput.model_json_schema(), indent=2)
+    system_prompt = f"You are an elite Behavioral Psychologist/HR Recruiter. Output ONLY valid JSON matching this schema:\n{schema_str}"
+    
+    user_prompt = f"""
+    Candidate id: {candidate_id}
+    Dominant Personality Trait: {strong}
+    Weakest Personality Trait: {weak}
+
+    Produce exactly 3 questions:
+    1. question_type "true_premise": Validate their {strong} trait with a situational workplace question. is_trap = false.
+    2. question_type "behavioral_pressure": Put them in a highly stressful hypothetical scenario that specifically targets their lack of {weak}. is_trap = true.
+    3. question_type "open_ended": Ask how they handle severe conflict with a co-worker. is_trap = false.
+    """
+    
+    try:
+        return _call_groq(system_prompt, user_prompt).model_dump()
+    except Exception as exc:
+        return {"error": f"Failed to generate behavioral trap: {exc}"}
 
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     
-    # Ensure you have GROQ_API_KEY in your environment or .env file
-    result = generate_ds_trap("2809")
-    print(json.dumps(result, indent=2))
+    print("\n--- GENERATING TECHNICAL INTERVIEW (JDS DATASET) ---")
+    tech_result = generate_technical_trap("2809")
+    print(json.dumps(tech_result, indent=2))
+
+    print("\n--- GENERATING BEHAVIORAL INTERVIEW (SDS DATASET) ---")
+    # Using ID 8120 from your SDS dataset
+    behav_result = generate_behavioral_trap("8120") 
+    print(json.dumps(behav_result, indent=2))
