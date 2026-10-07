@@ -255,19 +255,23 @@ def run(skills_path: Path, personality_path: Path, output_path: Path) -> list:
 
     skills = coerce_numeric(skills, SKILL_COLS, "Skills (JDS)", warnings)
     personality = coerce_numeric(personality, PERSONALITY_COLS, "Personality (SDS)", warnings)
-    skills = drop_duplicate_ids(skills, "Skills (JDS)", warnings)
-    personality = drop_duplicate_ids(personality, "Personality (SDS)", warnings)
 
-    # Requirement 2: inner join on id
-    merged = skills.merge(personality, on="id", how="inner", suffixes=("", "_sds"))
+    # Pair rows by position (the two files use disjoint candidate id spaces).
+    # Keep the skills file 'id' as the primary candidate id.
+    skills_df = skills.reset_index(drop=True)
+    personality_df = personality.drop(columns=["id"]).reset_index(drop=True)
+    merged = pd.concat([skills_df, personality_df], axis=1)
+    merged = merged.dropna(subset=SKILL_COLS + PERSONALITY_COLS).copy()
     if merged.empty:
-        raise ScorerError("Inner join on 'id' produced no rows - the files share no candidate ids.")
+        raise ScorerError("Positional join produced no rows - one or both files had no usable data.")
+
+    merged = drop_duplicate_ids(merged, "Skills (JDS)", warnings)
 
     stats = {
         "skills_rows": len(skills),
         "personality_rows": len(personality),
-        "skills_unmatched": len(skills) - len(merged),
-        "personality_unmatched": len(personality) - len(merged),
+        "skills_unmatched": max(0, len(skills) - len(merged)),
+        "personality_unmatched": max(0, len(personality) - len(merged)),
     }
 
     merged = add_suitability_score(merged)
