@@ -1,100 +1,69 @@
 """Interview / interrogation endpoints. Prefix (/api/interview) is applied in main.py."""
-import uuid
 
 from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel
 
-from app.schemas.models import (
-    EvaluationResponse, QuestionResponse, StartInterviewRequest, SubmitAnswerRequest,
-)
-
-# Member 1's files - optional until they exist.
-try:
-    from app.services.trap_engine import generate_trap  # type: ignore
-except ImportError:
-    generate_trap = None
-
-try:
-    from app.services.llm_interrogator import (  # type: ignore
-        evaluate_candidate_response, generate_trap_question,
-    )
-except ImportError:
-    generate_trap_question = None
-    evaluate_candidate_response = None
+# Naye AI Engines import kar rahe hain (No more mock data!)
+from app.services.trap_engine import generate_technical_trap, generate_behavioral_trap
+from app.services.evaluation_engine import evaluate_trap_answer
 
 router = APIRouter()
 
-# In-memory sessions: session_id -> {question_id: {"text", "trap"}}
-SESSIONS: dict[str, dict] = {}
+# ==========================================
+# PYDANTIC SCHEMAS (Request/Response Models)
+# ==========================================
+class StartInterviewRequest(BaseModel):
+    candidate_id: str
+    interview_type: str = "technical"  # "technical" ya "behavioral" pass kar sakte ho
 
+class SubmitAnswerRequest(BaseModel):
+    candidate_id: str
+    original_question: str
+    candidate_answer: str
+    attempt_number: int  # 1 for first trap, 2 for the double-down follow-up
 
-# ---------- mock fallbacks ----------
-def _mock_trap(candidate_id: str) -> dict:
-    return {"target_skill": "TensorFlow", "false_premise": "TensorFlow"}
-
-
-def _mock_question(trap: dict) -> str:
-    skill = trap["target_skill"]
-    return (f"I noticed you used {skill} in your main project. "
-            f"Can you walk me through how you configured it?")
-
-
-_REJECT_WORDS = ("don't", "dont", "do not", "didn't", "did not", "not use", "never", "no ",
-                 "isn't", "not in", "double-check", "recheck", "let me check", "not sure")
-
-
-def _mock_evaluate(trap: dict, answer: str) -> dict:
-    text = answer.lower()
-    if any(w in text for w in _REJECT_WORDS):
-        return {"status": "Passed", "hallucination_detected": False,
-                "reason": f"Candidate pushed back on the unsupported {trap['target_skill']} premise."}
-    return {"status": "Red Flag", "hallucination_detected": True,
-            "reason": f"Candidate accepted and elaborated on {trap['target_skill']}, "
-                      f"which has no evidence in their profile."}
-
-
-# ---------- endpoints ----------
-@router.post("/start", response_model=QuestionResponse)
+# ==========================================
+# ENDPOINTS
+# ==========================================
+@router.post("/start")
 def start_interview(req: StartInterviewRequest):
-    trap = None
-    question_text = None
-
-    if generate_trap is not None and generate_trap_question is not None:
-        try:
-            trap = generate_trap(req.candidate_id, req.job_id)
-            question_text = generate_trap_question(trap)
-        except Exception as exc:  # Gemini/API failure -> fall back, never 500 in the demo
-            print(f"[interview] real engine failed, using mock: {exc}")
-            trap = None
-
-    if trap is None:
-        trap = _mock_trap(req.candidate_id)
-        question_text = _mock_question(trap)
-
-    session_id = str(uuid.uuid4())
-    question_id = "q1"
-    SESSIONS[session_id] = {question_id: {"text": question_text, "trap": trap}}
-
-    return QuestionResponse(
-        session_id=session_id, question_id=question_id, question_text=question_text,
-        target_skill=trap.get("target_skill", "unknown") if isinstance(trap, dict) else "unknown",
-    )
+    """
+    Generates a 3-question dynamic interview (True Premise, False Premise Trap, Open Ended).
+    """
+    try:
+        # Request ke type ke hisaab se sahi engine trigger hoga
+        if req.interview_type.lower() == "behavioral":
+            data = generate_behavioral_trap(req.candidate_id)
+        else:
+            data = generate_technical_trap(req.candidate_id)
+            
+        if "error" in data:
+            raise HTTPException(status_code=400, detail=data["error"])
+            
+        return {"status": "success", "data": data}
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to start interview: {str(e)}")
 
 
-@router.post("/answer", response_model=EvaluationResponse)
+@router.post("/answer")
 def submit_answer(req: SubmitAnswerRequest):
-    session = SESSIONS.get(req.session_id)
-    if not session or req.question_id not in session:
-        raise HTTPException(status_code=404, detail="Unknown session or question")
-    entry = session[req.question_id]
-    trap = entry["trap"]
-
-    result = None
-    if evaluate_candidate_response is not None:
-        try:
-            result = evaluate_candidate_response(trap, entry["text"], req.candidate_response)
-        except Exception as exc:
-            print(f"[interview] evaluator failed, using mock: {exc}")
-    if result is None:
-        result = _mock_evaluate(trap, req.candidate_response)
-
-    return EvaluationResponse(**result)
+    """
+    Evaluates candidate's answer using the strict 'Double-Down' psychological protocol.
+    Returns: VERIFIED, FLAGGED, FOLLOW_UP, or HUMAN_REVIEW.
+    """
+    try:
+        # Seedha hamare naye evaluation engine ko answer bhej rahe hain
+        evaluation_result = evaluate_trap_answer(
+            original_question=req.original_question,
+            candidate_answer=req.candidate_answer,
+            attempt_number=req.attempt_number
+        )
+        
+        if "error" in evaluation_result:
+             raise HTTPException(status_code=400, detail=evaluation_result["error"])
+             
+        return {"status": "success", "evaluation": evaluation_result}
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to evaluate answer: {str(e)}")
