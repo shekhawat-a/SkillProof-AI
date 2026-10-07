@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+pandas
+openpyxl
+numpy
+scikit-learn
+google-genai
+groq
+python-dotenv
