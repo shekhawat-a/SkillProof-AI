@@ -1,0 +1,2605 @@
+[
+  {
+    "candidate_id": "2809",
+    "suitability_score": 43.8,
+    "skill_scores": {
+      "big_data_skills": 3.6,
+      "maths-stats_skills": 4,
+      "coding_skills": 4.5,
+      "ai_and_ml_skills": 4.8,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 33,
+      "extraversion": 34,
+      "openness_to_experience": 39,
+      "agreeableness": 45,
+      "conscientiousness": 51
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2231",
+    "suitability_score": 43.0,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 3.8,
+      "coding_skills": 3.3,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 4.4
+    },
+    "personality_scores": {
+      "neuroticism": 50,
+      "extraversion": 36,
+      "openness_to_experience": 31,
+      "agreeableness": 59,
+      "conscientiousness": 39
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3522",
+    "suitability_score": 43.0,
+    "skill_scores": {
+      "big_data_skills": 4.1,
+      "maths-stats_skills": 3.8,
+      "coding_skills": 4.4,
+      "ai_and_ml_skills": 4.2,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 38,
+      "extraversion": 35,
+      "openness_to_experience": 42,
+      "agreeableness": 39,
+      "conscientiousness": 49
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3291",
+    "suitability_score": 35.2,
+    "skill_scores": {
+      "big_data_skills": 4.4,
+      "maths-stats_skills": 3,
+      "coding_skills": 3.3,
+      "ai_and_ml_skills": 4.6,
+      "dashboard_and_storytelling_skills": 2.3
+    },
+    "personality_scores": {
+      "neuroticism": 41,
+      "extraversion": 26,
+      "openness_to_experience": 30,
+      "agreeableness": 40,
+      "conscientiousness": 19
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3424",
+    "suitability_score": 27.0,
+    "skill_scores": {
+      "big_data_skills": 2.3,
+      "maths-stats_skills": 2.3,
+      "coding_skills": 2.6,
+      "ai_and_ml_skills": 3.3,
+      "dashboard_and_storytelling_skills": 3
+    },
+    "personality_scores": {
+      "neuroticism": 20,
+      "extraversion": 17,
+      "openness_to_experience": 21,
+      "agreeableness": 31,
+      "conscientiousness": 26
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3757",
+    "suitability_score": 38.4,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 3.8,
+      "coding_skills": 2.6,
+      "ai_and_ml_skills": 4.9,
+      "dashboard_and_storytelling_skills": 2.9
+    },
+    "personality_scores": {
+      "neuroticism": 50,
+      "extraversion": 33,
+      "openness_to_experience": 21,
+      "agreeableness": 47,
+      "conscientiousness": 27
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2544",
+    "suitability_score": 46.0,
+    "skill_scores": {
+      "big_data_skills": 3,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 26,
+      "extraversion": 54,
+      "openness_to_experience": 49,
+      "agreeableness": 48,
+      "conscientiousness": 60
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3482",
+    "suitability_score": 38.8,
+    "skill_scores": {
+      "big_data_skills": 3.8,
+      "maths-stats_skills": 4.4,
+      "coding_skills": 3.4,
+      "ai_and_ml_skills": 3,
+      "dashboard_and_storytelling_skills": 4.8
+    },
+    "personality_scores": {
+      "neuroticism": 33,
+      "extraversion": 40,
+      "openness_to_experience": 28,
+      "agreeableness": 24,
+      "conscientiousness": 43
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3702",
+    "suitability_score": 45.0,
+    "skill_scores": {
+      "big_data_skills": 3.5,
+      "maths-stats_skills": 4.4,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4.6,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 31,
+      "extraversion": 38,
+      "openness_to_experience": 49,
+      "agreeableness": 43,
+      "conscientiousness": 56
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3312",
+    "suitability_score": 42.2,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 3.1,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4.8,
+      "dashboard_and_storytelling_skills": 3.2
+    },
+    "personality_scores": {
+      "neuroticism": 58,
+      "extraversion": 27,
+      "openness_to_experience": 64,
+      "agreeableness": 42,
+      "conscientiousness": 28
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3944",
+    "suitability_score": 44.8,
+    "skill_scores": {
+      "big_data_skills": 2.4,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 21,
+      "extraversion": 60,
+      "openness_to_experience": 46,
+      "agreeableness": 46,
+      "conscientiousness": 57
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2668",
+    "suitability_score": 42.0,
+    "skill_scores": {
+      "big_data_skills": 4.9,
+      "maths-stats_skills": 2.7,
+      "coding_skills": 3.8,
+      "ai_and_ml_skills": 4.6,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 47,
+      "extraversion": 22,
+      "openness_to_experience": 32,
+      "agreeableness": 42,
+      "conscientiousness": 57
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2386",
+    "suitability_score": 46.2,
+    "skill_scores": {
+      "big_data_skills": 3.8,
+      "maths-stats_skills": 5,
+      "coding_skills": 4.6,
+      "ai_and_ml_skills": 4.7,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 33,
+      "extraversion": 50,
+      "openness_to_experience": 40,
+      "agreeableness": 43,
+      "conscientiousness": 55
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2622",
+    "suitability_score": 47.2,
+    "skill_scores": {
+      "big_data_skills": 3.6,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 31,
+      "extraversion": 56,
+      "openness_to_experience": 53,
+      "agreeableness": 52,
+      "conscientiousness": 64
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3398",
+    "suitability_score": 49.0,
+    "skill_scores": {
+      "big_data_skills": 4.5,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 40,
+      "extraversion": 48,
+      "openness_to_experience": 46,
+      "agreeableness": 50,
+      "conscientiousness": 49
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3043",
+    "suitability_score": 43.4,
+    "skill_scores": {
+      "big_data_skills": 2.9,
+      "maths-stats_skills": 5,
+      "coding_skills": 4.4,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 4.4
+    },
+    "personality_scores": {
+      "neuroticism": 27,
+      "extraversion": 60,
+      "openness_to_experience": 38,
+      "agreeableness": 45,
+      "conscientiousness": 40
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2292",
+    "suitability_score": 42.8,
+    "skill_scores": {
+      "big_data_skills": 3.7,
+      "maths-stats_skills": 4.8,
+      "coding_skills": 4.6,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 3.3
+    },
+    "personality_scores": {
+      "neuroticism": 31,
+      "extraversion": 43,
+      "openness_to_experience": 42,
+      "agreeableness": 59,
+      "conscientiousness": 31
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3101",
+    "suitability_score": 46.2,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 3.9,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4.2,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 44,
+      "extraversion": 36,
+      "openness_to_experience": 49,
+      "agreeableness": 40,
+      "conscientiousness": 50
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3861",
+    "suitability_score": 46.2,
+    "skill_scores": {
+      "big_data_skills": 3.1,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 27,
+      "extraversion": 48,
+      "openness_to_experience": 50,
+      "agreeableness": 50,
+      "conscientiousness": 55
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2381",
+    "suitability_score": 45.4,
+    "skill_scores": {
+      "big_data_skills": 2.8,
+      "maths-stats_skills": 4.9,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 23,
+      "extraversion": 46,
+      "openness_to_experience": 51,
+      "agreeableness": 54,
+      "conscientiousness": 52
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3176",
+    "suitability_score": 38.2,
+    "skill_scores": {
+      "big_data_skills": 2.9,
+      "maths-stats_skills": 5,
+      "coding_skills": 3.9,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 2.3
+    },
+    "personality_scores": {
+      "neuroticism": 25,
+      "extraversion": 58,
+      "openness_to_experience": 34,
+      "agreeableness": 45,
+      "conscientiousness": 18
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3060",
+    "suitability_score": 38.2,
+    "skill_scores": {
+      "big_data_skills": 3.8,
+      "maths-stats_skills": 5,
+      "coding_skills": 3.2,
+      "ai_and_ml_skills": 4.6,
+      "dashboard_and_storytelling_skills": 2.5
+    },
+    "personality_scores": {
+      "neuroticism": 35,
+      "extraversion": 54,
+      "openness_to_experience": 28,
+      "agreeableness": 42,
+      "conscientiousness": 23
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2518",
+    "suitability_score": 35.0,
+    "skill_scores": {
+      "big_data_skills": 2.9,
+      "maths-stats_skills": 2.5,
+      "coding_skills": 3.2,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 3.9
+    },
+    "personality_scores": {
+      "neuroticism": 24,
+      "extraversion": 22,
+      "openness_to_experience": 26,
+      "agreeableness": 57,
+      "conscientiousness": 34
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3876",
+    "suitability_score": 43.2,
+    "skill_scores": {
+      "big_data_skills": 3.5,
+      "maths-stats_skills": 4.5,
+      "coding_skills": 4.6,
+      "ai_and_ml_skills": 4.4,
+      "dashboard_and_storytelling_skills": 4.6
+    },
+    "personality_scores": {
+      "neuroticism": 33,
+      "extraversion": 40,
+      "openness_to_experience": 44,
+      "agreeableness": 39,
+      "conscientiousness": 44
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2511",
+    "suitability_score": 48.6,
+    "skill_scores": {
+      "big_data_skills": 4.3,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 39,
+      "extraversion": 53,
+      "openness_to_experience": 58,
+      "agreeableness": 49,
+      "conscientiousness": 58
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2180",
+    "suitability_score": 48.0,
+    "skill_scores": {
+      "big_data_skills": 4,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 35,
+      "extraversion": 49,
+      "openness_to_experience": 53,
+      "agreeableness": 49,
+      "conscientiousness": 59
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3819",
+    "suitability_score": 31.4,
+    "skill_scores": {
+      "big_data_skills": 2.4,
+      "maths-stats_skills": 3.4,
+      "coding_skills": 3.1,
+      "ai_and_ml_skills": 4.3,
+      "dashboard_and_storytelling_skills": 2.5
+    },
+    "personality_scores": {
+      "neuroticism": 18,
+      "extraversion": 29,
+      "openness_to_experience": 28,
+      "agreeableness": 37,
+      "conscientiousness": 20
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3788",
+    "suitability_score": 40.6,
+    "skill_scores": {
+      "big_data_skills": 4.4,
+      "maths-stats_skills": 4,
+      "coding_skills": 4.1,
+      "ai_and_ml_skills": 4.9,
+      "dashboard_and_storytelling_skills": 2.9
+    },
+    "personality_scores": {
+      "neuroticism": 40,
+      "extraversion": 34,
+      "openness_to_experience": 38,
+      "agreeableness": 46,
+      "conscientiousness": 26
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3608",
+    "suitability_score": 42.2,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 5,
+      "coding_skills": 4.6,
+      "ai_and_ml_skills": 2.8,
+      "dashboard_and_storytelling_skills": 3.7
+    },
+    "personality_scores": {
+      "neuroticism": 46,
+      "extraversion": 45,
+      "openness_to_experience": 42,
+      "agreeableness": 22,
+      "conscientiousness": 35
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2845",
+    "suitability_score": 41.8,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 3.5,
+      "coding_skills": 3.1,
+      "ai_and_ml_skills": 4.3,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 46,
+      "extraversion": 30,
+      "openness_to_experience": 25,
+      "agreeableness": 37,
+      "conscientiousness": 51
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3400",
+    "suitability_score": 39.4,
+    "skill_scores": {
+      "big_data_skills": 3.1,
+      "maths-stats_skills": 3.8,
+      "coding_skills": 4.1,
+      "ai_and_ml_skills": 4.9,
+      "dashboard_and_storytelling_skills": 3.8
+    },
+    "personality_scores": {
+      "neuroticism": 26,
+      "extraversion": 32,
+      "openness_to_experience": 37,
+      "agreeableness": 44,
+      "conscientiousness": 35
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2963",
+    "suitability_score": 43.8,
+    "skill_scores": {
+      "big_data_skills": 3.6,
+      "maths-stats_skills": 4,
+      "coding_skills": 4.5,
+      "ai_and_ml_skills": 4.8,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 50,
+      "extraversion": 59,
+      "openness_to_experience": 53,
+      "agreeableness": 20,
+      "conscientiousness": 25
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2627",
+    "suitability_score": 43.0,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 3.8,
+      "coding_skills": 3.3,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 4.4
+    },
+    "personality_scores": {
+      "neuroticism": 61,
+      "extraversion": 17,
+      "openness_to_experience": 41,
+      "agreeableness": 59,
+      "conscientiousness": 25
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3742",
+    "suitability_score": 43.0,
+    "skill_scores": {
+      "big_data_skills": 4.1,
+      "maths-stats_skills": 3.8,
+      "coding_skills": 4.4,
+      "ai_and_ml_skills": 4.2,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 60,
+      "extraversion": 21,
+      "openness_to_experience": 31,
+      "agreeableness": 33,
+      "conscientiousness": 25
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2651",
+    "suitability_score": 35.2,
+    "skill_scores": {
+      "big_data_skills": 4.4,
+      "maths-stats_skills": 3,
+      "coding_skills": 3.3,
+      "ai_and_ml_skills": 4.6,
+      "dashboard_and_storytelling_skills": 2.3
+    },
+    "personality_scores": {
+      "neuroticism": 17,
+      "extraversion": 26,
+      "openness_to_experience": 34,
+      "agreeableness": 30,
+      "conscientiousness": 44
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2931",
+    "suitability_score": 27.0,
+    "skill_scores": {
+      "big_data_skills": 2.3,
+      "maths-stats_skills": 2.3,
+      "coding_skills": 2.6,
+      "ai_and_ml_skills": 3.3,
+      "dashboard_and_storytelling_skills": 3
+    },
+    "personality_scores": {
+      "neuroticism": 56,
+      "extraversion": 53,
+      "openness_to_experience": 25,
+      "agreeableness": 43,
+      "conscientiousness": 44
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2132",
+    "suitability_score": 38.4,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 3.8,
+      "coding_skills": 2.6,
+      "ai_and_ml_skills": 4.9,
+      "dashboard_and_storytelling_skills": 2.9
+    },
+    "personality_scores": {
+      "neuroticism": 38,
+      "extraversion": 34,
+      "openness_to_experience": 24,
+      "agreeableness": 20,
+      "conscientiousness": 29
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3287",
+    "suitability_score": 46.0,
+    "skill_scores": {
+      "big_data_skills": 3,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 29,
+      "extraversion": 41,
+      "openness_to_experience": 44,
+      "agreeableness": 43,
+      "conscientiousness": 24
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2530",
+    "suitability_score": 38.8,
+    "skill_scores": {
+      "big_data_skills": 3.8,
+      "maths-stats_skills": 4.4,
+      "coding_skills": 3.4,
+      "ai_and_ml_skills": 3,
+      "dashboard_and_storytelling_skills": 4.8
+    },
+    "personality_scores": {
+      "neuroticism": 47,
+      "extraversion": 50,
+      "openness_to_experience": 47,
+      "agreeableness": 60,
+      "conscientiousness": 58
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2812",
+    "suitability_score": 45.0,
+    "skill_scores": {
+      "big_data_skills": 3.5,
+      "maths-stats_skills": 4.4,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4.6,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 39,
+      "extraversion": 49,
+      "openness_to_experience": 47,
+      "agreeableness": 48,
+      "conscientiousness": 52
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3781",
+    "suitability_score": 42.2,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 3.1,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4.8,
+      "dashboard_and_storytelling_skills": 3.2
+    },
+    "personality_scores": {
+      "neuroticism": 31,
+      "extraversion": 31,
+      "openness_to_experience": 24,
+      "agreeableness": 23,
+      "conscientiousness": 44
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3160",
+    "suitability_score": 44.8,
+    "skill_scores": {
+      "big_data_skills": 2.4,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 27,
+      "extraversion": 25,
+      "openness_to_experience": 24,
+      "agreeableness": 53,
+      "conscientiousness": 45
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2189",
+    "suitability_score": 42.0,
+    "skill_scores": {
+      "big_data_skills": 4.9,
+      "maths-stats_skills": 2.7,
+      "coding_skills": 3.8,
+      "ai_and_ml_skills": 4.6,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 33,
+      "extraversion": 31,
+      "openness_to_experience": 30,
+      "agreeableness": 46,
+      "conscientiousness": 63
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2088",
+    "suitability_score": 46.2,
+    "skill_scores": {
+      "big_data_skills": 3.8,
+      "maths-stats_skills": 5,
+      "coding_skills": 4.6,
+      "ai_and_ml_skills": 4.7,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 22,
+      "extraversion": 46,
+      "openness_to_experience": 44,
+      "agreeableness": 60,
+      "conscientiousness": 42
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2261",
+    "suitability_score": 47.2,
+    "skill_scores": {
+      "big_data_skills": 3.6,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 34,
+      "extraversion": 54,
+      "openness_to_experience": 53,
+      "agreeableness": 54,
+      "conscientiousness": 40
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3418",
+    "suitability_score": 49.0,
+    "skill_scores": {
+      "big_data_skills": 4.5,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 35,
+      "extraversion": 46,
+      "openness_to_experience": 46,
+      "agreeableness": 47,
+      "conscientiousness": 56
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3530",
+    "suitability_score": 43.4,
+    "skill_scores": {
+      "big_data_skills": 2.9,
+      "maths-stats_skills": 5,
+      "coding_skills": 4.4,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 4.4
+    },
+    "personality_scores": {
+      "neuroticism": 23,
+      "extraversion": 62,
+      "openness_to_experience": 55,
+      "agreeableness": 49,
+      "conscientiousness": 64
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2711",
+    "suitability_score": 42.8,
+    "skill_scores": {
+      "big_data_skills": 3.7,
+      "maths-stats_skills": 4.8,
+      "coding_skills": 4.6,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 3.3
+    },
+    "personality_scores": {
+      "neuroticism": 33,
+      "extraversion": 50,
+      "openness_to_experience": 46,
+      "agreeableness": 48,
+      "conscientiousness": 53
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2355",
+    "suitability_score": 46.2,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 3.9,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4.2,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 46,
+      "extraversion": 53,
+      "openness_to_experience": 58,
+      "agreeableness": 38,
+      "conscientiousness": 56
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3150",
+    "suitability_score": 46.2,
+    "skill_scores": {
+      "big_data_skills": 3.1,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 37,
+      "extraversion": 50,
+      "openness_to_experience": 52,
+      "agreeableness": 46,
+      "conscientiousness": 54
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2171",
+    "suitability_score": 45.4,
+    "skill_scores": {
+      "big_data_skills": 2.8,
+      "maths-stats_skills": 4.9,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 52,
+      "extraversion": 41,
+      "openness_to_experience": 43,
+      "agreeableness": 46,
+      "conscientiousness": 49
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3408",
+    "suitability_score": 38.2,
+    "skill_scores": {
+      "big_data_skills": 2.9,
+      "maths-stats_skills": 5,
+      "coding_skills": 3.9,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 2.3
+    },
+    "personality_scores": {
+      "neuroticism": 27,
+      "extraversion": 51,
+      "openness_to_experience": 57,
+      "agreeableness": 53,
+      "conscientiousness": 49
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3407",
+    "suitability_score": 38.2,
+    "skill_scores": {
+      "big_data_skills": 3.8,
+      "maths-stats_skills": 5,
+      "coding_skills": 3.2,
+      "ai_and_ml_skills": 4.6,
+      "dashboard_and_storytelling_skills": 2.5
+    },
+    "personality_scores": {
+      "neuroticism": 39,
+      "extraversion": 60,
+      "openness_to_experience": 50,
+      "agreeableness": 47,
+      "conscientiousness": 63
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2681",
+    "suitability_score": 35.0,
+    "skill_scores": {
+      "big_data_skills": 2.9,
+      "maths-stats_skills": 2.5,
+      "coding_skills": 3.2,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 3.9
+    },
+    "personality_scores": {
+      "neuroticism": 27,
+      "extraversion": 42,
+      "openness_to_experience": 20,
+      "agreeableness": 37,
+      "conscientiousness": 33
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2136",
+    "suitability_score": 43.2,
+    "skill_scores": {
+      "big_data_skills": 3.5,
+      "maths-stats_skills": 4.5,
+      "coding_skills": 4.6,
+      "ai_and_ml_skills": 4.4,
+      "dashboard_and_storytelling_skills": 4.6
+    },
+    "personality_scores": {
+      "neuroticism": 28,
+      "extraversion": 51,
+      "openness_to_experience": 53,
+      "agreeableness": 56,
+      "conscientiousness": 60
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2053",
+    "suitability_score": 48.6,
+    "skill_scores": {
+      "big_data_skills": 4.3,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 35,
+      "extraversion": 54,
+      "openness_to_experience": 44,
+      "agreeableness": 50,
+      "conscientiousness": 57
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2529",
+    "suitability_score": 48.0,
+    "skill_scores": {
+      "big_data_skills": 4,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 34,
+      "extraversion": 28,
+      "openness_to_experience": 24,
+      "agreeableness": 22,
+      "conscientiousness": 42
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2223",
+    "suitability_score": 31.4,
+    "skill_scores": {
+      "big_data_skills": 2.4,
+      "maths-stats_skills": 3.4,
+      "coding_skills": 3.1,
+      "ai_and_ml_skills": 4.3,
+      "dashboard_and_storytelling_skills": 2.5
+    },
+    "personality_scores": {
+      "neuroticism": 44,
+      "extraversion": 28,
+      "openness_to_experience": 44,
+      "agreeableness": 61,
+      "conscientiousness": 27
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3807",
+    "suitability_score": 47.4,
+    "skill_scores": {
+      "big_data_skills": 4.2,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4.5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 37,
+      "extraversion": 50,
+      "openness_to_experience": 53,
+      "agreeableness": 41,
+      "conscientiousness": 51
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "4000",
+    "suitability_score": 45.2,
+    "skill_scores": {
+      "big_data_skills": 3.1,
+      "maths-stats_skills": 5,
+      "coding_skills": 4.9,
+      "ai_and_ml_skills": 4.6,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 25,
+      "extraversion": 57,
+      "openness_to_experience": 45,
+      "agreeableness": 42,
+      "conscientiousness": 50
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2620",
+    "suitability_score": 41.2,
+    "skill_scores": {
+      "big_data_skills": 2.6,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 3,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 23,
+      "extraversion": 65,
+      "openness_to_experience": 50,
+      "agreeableness": 26,
+      "conscientiousness": 54
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2962",
+    "suitability_score": 40.0,
+    "skill_scores": {
+      "big_data_skills": 2.3,
+      "maths-stats_skills": 4.6,
+      "coding_skills": 4.3,
+      "ai_and_ml_skills": 3.8,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 21,
+      "extraversion": 44,
+      "openness_to_experience": 38,
+      "agreeableness": 32,
+      "conscientiousness": 46
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2212",
+    "suitability_score": 36.8,
+    "skill_scores": {
+      "big_data_skills": 3.5,
+      "maths-stats_skills": 2.4,
+      "coding_skills": 4.6,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 2.9
+    },
+    "personality_scores": {
+      "neuroticism": 30,
+      "extraversion": 21,
+      "openness_to_experience": 40,
+      "agreeableness": 62,
+      "conscientiousness": 24
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3326",
+    "suitability_score": 41.2,
+    "skill_scores": {
+      "big_data_skills": 4.8,
+      "maths-stats_skills": 5,
+      "coding_skills": 4.4,
+      "ai_and_ml_skills": 2.9,
+      "dashboard_and_storytelling_skills": 3.5
+    },
+    "personality_scores": {
+      "neuroticism": 44,
+      "extraversion": 61,
+      "openness_to_experience": 39,
+      "agreeableness": 26,
+      "conscientiousness": 29
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3768",
+    "suitability_score": 44.4,
+    "skill_scores": {
+      "big_data_skills": 3.1,
+      "maths-stats_skills": 4.1,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 27,
+      "extraversion": 37,
+      "openness_to_experience": 55,
+      "agreeableness": 55,
+      "conscientiousness": 45
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2635",
+    "suitability_score": 46.6,
+    "skill_scores": {
+      "big_data_skills": 3.3,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 27,
+      "extraversion": 55,
+      "openness_to_experience": 45,
+      "agreeableness": 45,
+      "conscientiousness": 58
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3695",
+    "suitability_score": 46.6,
+    "skill_scores": {
+      "big_data_skills": 4,
+      "maths-stats_skills": 4.6,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4.7,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 38,
+      "extraversion": 44,
+      "openness_to_experience": 47,
+      "agreeableness": 41,
+      "conscientiousness": 51
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2275",
+    "suitability_score": 46.0,
+    "skill_scores": {
+      "big_data_skills": 3,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 27,
+      "extraversion": 61,
+      "openness_to_experience": 54,
+      "agreeableness": 49,
+      "conscientiousness": 66
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3504",
+    "suitability_score": 47.2,
+    "skill_scores": {
+      "big_data_skills": 4.8,
+      "maths-stats_skills": 4.9,
+      "coding_skills": 4.9,
+      "ai_and_ml_skills": 4.8,
+      "dashboard_and_storytelling_skills": 4.2
+    },
+    "personality_scores": {
+      "neuroticism": 44,
+      "extraversion": 47,
+      "openness_to_experience": 46,
+      "agreeableness": 46,
+      "conscientiousness": 40
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2536",
+    "suitability_score": 47.2,
+    "skill_scores": {
+      "big_data_skills": 4.5,
+      "maths-stats_skills": 4.1,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 41,
+      "extraversion": 38,
+      "openness_to_experience": 48,
+      "agreeableness": 49,
+      "conscientiousness": 49
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2906",
+    "suitability_score": 46.2,
+    "skill_scores": {
+      "big_data_skills": 3.3,
+      "maths-stats_skills": 5,
+      "coding_skills": 4.8,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 29,
+      "extraversion": 56,
+      "openness_to_experience": 42,
+      "agreeableness": 49,
+      "conscientiousness": 61
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2759",
+    "suitability_score": 46.6,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 4.2,
+      "coding_skills": 4.4,
+      "ai_and_ml_skills": 4.7,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 60,
+      "extraversion": 37,
+      "openness_to_experience": 40,
+      "agreeableness": 42,
+      "conscientiousness": 56
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2045",
+    "suitability_score": 48.2,
+    "skill_scores": {
+      "big_data_skills": 4.1,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 35,
+      "extraversion": 51,
+      "openness_to_experience": 52,
+      "agreeableness": 45,
+      "conscientiousness": 54
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2161",
+    "suitability_score": 46.2,
+    "skill_scores": {
+      "big_data_skills": 4.6,
+      "maths-stats_skills": 3.9,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4.6,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 41,
+      "extraversion": 36,
+      "openness_to_experience": 53,
+      "agreeableness": 43,
+      "conscientiousness": 50
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3032",
+    "suitability_score": 48.2,
+    "skill_scores": {
+      "big_data_skills": 4.6,
+      "maths-stats_skills": 5,
+      "coding_skills": 4.5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 42,
+      "extraversion": 55,
+      "openness_to_experience": 39,
+      "agreeableness": 55,
+      "conscientiousness": 58
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3679",
+    "suitability_score": 46.2,
+    "skill_scores": {
+      "big_data_skills": 3.1,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 29,
+      "extraversion": 62,
+      "openness_to_experience": 48,
+      "agreeableness": 49,
+      "conscientiousness": 55
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3106",
+    "suitability_score": 38.8,
+    "skill_scores": {
+      "big_data_skills": 3,
+      "maths-stats_skills": 3.5,
+      "coding_skills": 2.9,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 28,
+      "extraversion": 32,
+      "openness_to_experience": 24,
+      "agreeableness": 51,
+      "conscientiousness": 51
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3281",
+    "suitability_score": 46.4,
+    "skill_scores": {
+      "big_data_skills": 3.2,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 30,
+      "extraversion": 54,
+      "openness_to_experience": 47,
+      "agreeableness": 58,
+      "conscientiousness": 57
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2094",
+    "suitability_score": 41.0,
+    "skill_scores": {
+      "big_data_skills": 3.4,
+      "maths-stats_skills": 4.4,
+      "coding_skills": 3.3,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 4.4
+    },
+    "personality_scores": {
+      "neuroticism": 31,
+      "extraversion": 41,
+      "openness_to_experience": 27,
+      "agreeableness": 58,
+      "conscientiousness": 41
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2276",
+    "suitability_score": 37.6,
+    "skill_scores": {
+      "big_data_skills": 3.9,
+      "maths-stats_skills": 2.7,
+      "coding_skills": 2.2,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 36,
+      "extraversion": 22,
+      "openness_to_experience": 19,
+      "agreeableness": 62,
+      "conscientiousness": 62
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2966",
+    "suitability_score": 48.0,
+    "skill_scores": {
+      "big_data_skills": 4.3,
+      "maths-stats_skills": 5,
+      "coding_skills": 4.7,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 40,
+      "extraversion": 54,
+      "openness_to_experience": 44,
+      "agreeableness": 49,
+      "conscientiousness": 62
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3773",
+    "suitability_score": 49.6,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4.8,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 47,
+      "extraversion": 48,
+      "openness_to_experience": 65,
+      "agreeableness": 44,
+      "conscientiousness": 46
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3855",
+    "suitability_score": 36.0,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 3.5,
+      "coding_skills": 2.9,
+      "ai_and_ml_skills": 3.5,
+      "dashboard_and_storytelling_skills": 3.1
+    },
+    "personality_scores": {
+      "neuroticism": 65,
+      "extraversion": 31,
+      "openness_to_experience": 27,
+      "agreeableness": 29,
+      "conscientiousness": 29
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2405",
+    "suitability_score": 41.2,
+    "skill_scores": {
+      "big_data_skills": 3.7,
+      "maths-stats_skills": 4.5,
+      "coding_skills": 3.9,
+      "ai_and_ml_skills": 3.5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 35,
+      "extraversion": 42,
+      "openness_to_experience": 34,
+      "agreeableness": 29,
+      "conscientiousness": 50
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2925",
+    "suitability_score": 27.2,
+    "skill_scores": {
+      "big_data_skills": 2.8,
+      "maths-stats_skills": 2.2,
+      "coding_skills": 2.3,
+      "ai_and_ml_skills": 3.6,
+      "dashboard_and_storytelling_skills": 2.7
+    },
+    "personality_scores": {
+      "neuroticism": 25,
+      "extraversion": 17,
+      "openness_to_experience": 43,
+      "agreeableness": 31,
+      "conscientiousness": 24
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2981",
+    "suitability_score": 44.4,
+    "skill_scores": {
+      "big_data_skills": 4.7,
+      "maths-stats_skills": 4.5,
+      "coding_skills": 3,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 41,
+      "extraversion": 39,
+      "openness_to_experience": 48,
+      "agreeableness": 46,
+      "conscientiousness": 59
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2991",
+    "suitability_score": 39.0,
+    "skill_scores": {
+      "big_data_skills": 2.9,
+      "maths-stats_skills": 3.9,
+      "coding_skills": 2.9,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 4.8
+    },
+    "personality_scores": {
+      "neuroticism": 27,
+      "extraversion": 36,
+      "openness_to_experience": 35,
+      "agreeableness": 46,
+      "conscientiousness": 43
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2667",
+    "suitability_score": 41.6,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 4.8,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 3,
+      "dashboard_and_storytelling_skills": 3
+    },
+    "personality_scores": {
+      "neuroticism": 66,
+      "extraversion": 45,
+      "openness_to_experience": 49,
+      "agreeableness": 24,
+      "conscientiousness": 24
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3841",
+    "suitability_score": 47.6,
+    "skill_scores": {
+      "big_data_skills": 4.1,
+      "maths-stats_skills": 4.9,
+      "coding_skills": 4.8,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 35,
+      "extraversion": 45,
+      "openness_to_experience": 47,
+      "agreeableness": 56,
+      "conscientiousness": 62
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2310",
+    "suitability_score": 47.2,
+    "skill_scores": {
+      "big_data_skills": 3.8,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4.8,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 34,
+      "extraversion": 45,
+      "openness_to_experience": 44,
+      "agreeableness": 46,
+      "conscientiousness": 49
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2725",
+    "suitability_score": 36.8,
+    "skill_scores": {
+      "big_data_skills": 2.5,
+      "maths-stats_skills": 5,
+      "coding_skills": 3.2,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 2.7
+    },
+    "personality_scores": {
+      "neuroticism": 19,
+      "extraversion": 46,
+      "openness_to_experience": 25,
+      "agreeableness": 64,
+      "conscientiousness": 22
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2630",
+    "suitability_score": 49.8,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4.9,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 46,
+      "extraversion": 47,
+      "openness_to_experience": 45,
+      "agreeableness": 43,
+      "conscientiousness": 52
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2487",
+    "suitability_score": 47.4,
+    "skill_scores": {
+      "big_data_skills": 3.7,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 32,
+      "extraversion": 59,
+      "openness_to_experience": 48,
+      "agreeableness": 49,
+      "conscientiousness": 57
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2577",
+    "suitability_score": 49.8,
+    "skill_scores": {
+      "big_data_skills": 4.9,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 45,
+      "extraversion": 51,
+      "openness_to_experience": 39,
+      "agreeableness": 56,
+      "conscientiousness": 53
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3476",
+    "suitability_score": 35.8,
+    "skill_scores": {
+      "big_data_skills": 2.5,
+      "maths-stats_skills": 4.3,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 3.1,
+      "dashboard_and_storytelling_skills": 3
+    },
+    "personality_scores": {
+      "neuroticism": 20,
+      "extraversion": 39,
+      "openness_to_experience": 19,
+      "agreeableness": 25,
+      "conscientiousness": 24
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3440",
+    "suitability_score": 48.0,
+    "skill_scores": {
+      "big_data_skills": 4.1,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4.9,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 36,
+      "extraversion": 46,
+      "openness_to_experience": 45,
+      "agreeableness": 44,
+      "conscientiousness": 54
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3618",
+    "suitability_score": 45.4,
+    "skill_scores": {
+      "big_data_skills": 3.5,
+      "maths-stats_skills": 5,
+      "coding_skills": 4.4,
+      "ai_and_ml_skills": 4.8,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 32,
+      "extraversion": 50,
+      "openness_to_experience": 49,
+      "agreeableness": 45,
+      "conscientiousness": 53
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3818",
+    "suitability_score": 42.8,
+    "skill_scores": {
+      "big_data_skills": 3.1,
+      "maths-stats_skills": 5,
+      "coding_skills": 3.3,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 26,
+      "extraversion": 51,
+      "openness_to_experience": 49,
+      "agreeableness": 48,
+      "conscientiousness": 59
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2941",
+    "suitability_score": 40.4,
+    "skill_scores": {
+      "big_data_skills": 4.4,
+      "maths-stats_skills": 2.7,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 3.1,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 41,
+      "extraversion": 23,
+      "openness_to_experience": 21,
+      "agreeableness": 27,
+      "conscientiousness": 61
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2035",
+    "suitability_score": 38.6,
+    "skill_scores": {
+      "big_data_skills": 3,
+      "maths-stats_skills": 3.2,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4,
+      "dashboard_and_storytelling_skills": 4.1
+    },
+    "personality_scores": {
+      "neuroticism": 26,
+      "extraversion": 26,
+      "openness_to_experience": 19,
+      "agreeableness": 34,
+      "conscientiousness": 35
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3910",
+    "suitability_score": 43.4,
+    "skill_scores": {
+      "big_data_skills": 4.9,
+      "maths-stats_skills": 4.6,
+      "coding_skills": 2.3,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 4.9
+    },
+    "personality_scores": {
+      "neuroticism": 47,
+      "extraversion": 43,
+      "openness_to_experience": 47,
+      "agreeableness": 51,
+      "conscientiousness": 43
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3357",
+    "suitability_score": 30.2,
+    "skill_scores": {
+      "big_data_skills": 4.5,
+      "maths-stats_skills": 2.6,
+      "coding_skills": 2.5,
+      "ai_and_ml_skills": 2.2,
+      "dashboard_and_storytelling_skills": 3.3
+    },
+    "personality_scores": {
+      "neuroticism": 40,
+      "extraversion": 22,
+      "openness_to_experience": 22,
+      "agreeableness": 20,
+      "conscientiousness": 29
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2164",
+    "suitability_score": 36.6,
+    "skill_scores": {
+      "big_data_skills": 2.7,
+      "maths-stats_skills": 4.4,
+      "coding_skills": 3.9,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 2.3
+    },
+    "personality_scores": {
+      "neuroticism": 24,
+      "extraversion": 40,
+      "openness_to_experience": 23,
+      "agreeableness": 64,
+      "conscientiousness": 21
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3464",
+    "suitability_score": 37.6,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 2.9,
+      "coding_skills": 4.6,
+      "ai_and_ml_skills": 3.6,
+      "dashboard_and_storytelling_skills": 2.7
+    },
+    "personality_scores": {
+      "neuroticism": 54,
+      "extraversion": 25,
+      "openness_to_experience": 48,
+      "agreeableness": 34,
+      "conscientiousness": 21
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3341",
+    "suitability_score": 46.6,
+    "skill_scores": {
+      "big_data_skills": 3.3,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 28,
+      "extraversion": 56,
+      "openness_to_experience": 44,
+      "agreeableness": 49,
+      "conscientiousness": 59
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3034",
+    "suitability_score": 39.0,
+    "skill_scores": {
+      "big_data_skills": 2.7,
+      "maths-stats_skills": 2.9,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 3.9,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 23,
+      "extraversion": 24,
+      "openness_to_experience": 39,
+      "agreeableness": 37,
+      "conscientiousness": 64
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2946",
+    "suitability_score": 37.2,
+    "skill_scores": {
+      "big_data_skills": 2.8,
+      "maths-stats_skills": 5,
+      "coding_skills": 2.5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 3.3
+    },
+    "personality_scores": {
+      "neuroticism": 26,
+      "extraversion": 52,
+      "openness_to_experience": 29,
+      "agreeableness": 54,
+      "conscientiousness": 30
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2304",
+    "suitability_score": 43.4,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 4.6,
+      "coding_skills": 2.9,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 4.2
+    },
+    "personality_scores": {
+      "neuroticism": 56,
+      "extraversion": 42,
+      "openness_to_experience": 43,
+      "agreeableness": 50,
+      "conscientiousness": 38
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3759",
+    "suitability_score": 44.0,
+    "skill_scores": {
+      "big_data_skills": 3.8,
+      "maths-stats_skills": 5,
+      "coding_skills": 3.7,
+      "ai_and_ml_skills": 4.5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 34,
+      "extraversion": 50,
+      "openness_to_experience": 56,
+      "agreeableness": 39,
+      "conscientiousness": 49
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3385",
+    "suitability_score": 47.0,
+    "skill_scores": {
+      "big_data_skills": 3.5,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 29,
+      "extraversion": 51,
+      "openness_to_experience": 49,
+      "agreeableness": 49,
+      "conscientiousness": 57
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2615",
+    "suitability_score": 42.0,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 3.4,
+      "dashboard_and_storytelling_skills": 2.6
+    },
+    "personality_scores": {
+      "neuroticism": 44,
+      "extraversion": 53,
+      "openness_to_experience": 44,
+      "agreeableness": 30,
+      "conscientiousness": 24
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2361",
+    "suitability_score": 43.6,
+    "skill_scores": {
+      "big_data_skills": 4.2,
+      "maths-stats_skills": 3.8,
+      "coding_skills": 3.8,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 36,
+      "extraversion": 36,
+      "openness_to_experience": 55,
+      "agreeableness": 47,
+      "conscientiousness": 46
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3405",
+    "suitability_score": 48.8,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 4.4,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 52,
+      "extraversion": 40,
+      "openness_to_experience": 27,
+      "agreeableness": 63,
+      "conscientiousness": 45
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2704",
+    "suitability_score": 40.6,
+    "skill_scores": {
+      "big_data_skills": 4.6,
+      "maths-stats_skills": 3.4,
+      "coding_skills": 4.4,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 2.9
+    },
+    "personality_scores": {
+      "neuroticism": 44,
+      "extraversion": 29,
+      "openness_to_experience": 20,
+      "agreeableness": 50,
+      "conscientiousness": 26
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3872",
+    "suitability_score": 47.0,
+    "skill_scores": {
+      "big_data_skills": 3.5,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 30,
+      "extraversion": 56,
+      "openness_to_experience": 41,
+      "agreeableness": 48,
+      "conscientiousness": 52
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2168",
+    "suitability_score": 40.0,
+    "skill_scores": {
+      "big_data_skills": 3.9,
+      "maths-stats_skills": 4,
+      "coding_skills": 2.3,
+      "ai_and_ml_skills": 4.8,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 34,
+      "extraversion": 35,
+      "openness_to_experience": 50,
+      "agreeableness": 45,
+      "conscientiousness": 59
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3923",
+    "suitability_score": 36.2,
+    "skill_scores": {
+      "big_data_skills": 4.3,
+      "maths-stats_skills": 2.3,
+      "coding_skills": 3,
+      "ai_and_ml_skills": 3.5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 40,
+      "extraversion": 21,
+      "openness_to_experience": 61,
+      "agreeableness": 32,
+      "conscientiousness": 54
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3065",
+    "suitability_score": 32.4,
+    "skill_scores": {
+      "big_data_skills": 2.5,
+      "maths-stats_skills": 4.9,
+      "coding_skills": 2.9,
+      "ai_and_ml_skills": 3,
+      "dashboard_and_storytelling_skills": 2.9
+    },
+    "personality_scores": {
+      "neuroticism": 21,
+      "extraversion": 44,
+      "openness_to_experience": 28,
+      "agreeableness": 27,
+      "conscientiousness": 23
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2127",
+    "suitability_score": 47.6,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 4.5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4.3,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 54,
+      "extraversion": 39,
+      "openness_to_experience": 43,
+      "agreeableness": 38,
+      "conscientiousness": 50
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2032",
+    "suitability_score": 45.4,
+    "skill_scores": {
+      "big_data_skills": 2.9,
+      "maths-stats_skills": 5,
+      "coding_skills": 4.8,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 23,
+      "extraversion": 48,
+      "openness_to_experience": 47,
+      "agreeableness": 58,
+      "conscientiousness": 61
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2324",
+    "suitability_score": 47.2,
+    "skill_scores": {
+      "big_data_skills": 3.6,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 31,
+      "extraversion": 50,
+      "openness_to_experience": 43,
+      "agreeableness": 44,
+      "conscientiousness": 55
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3330",
+    "suitability_score": 32.0,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 2.9,
+      "coding_skills": 3.2,
+      "ai_and_ml_skills": 2.3,
+      "dashboard_and_storytelling_skills": 2.6
+    },
+    "personality_scores": {
+      "neuroticism": 50,
+      "extraversion": 25,
+      "openness_to_experience": 48,
+      "agreeableness": 17,
+      "conscientiousness": 23
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2155",
+    "suitability_score": 46.4,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 4.2,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4.5,
+      "dashboard_and_storytelling_skills": 4.5
+    },
+    "personality_scores": {
+      "neuroticism": 62,
+      "extraversion": 37,
+      "openness_to_experience": 45,
+      "agreeableness": 43,
+      "conscientiousness": 39
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2007",
+    "suitability_score": 45.8,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 3.6,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4.7,
+      "dashboard_and_storytelling_skills": 4.6
+    },
+    "personality_scores": {
+      "neuroticism": 57,
+      "extraversion": 31,
+      "openness_to_experience": 51,
+      "agreeableness": 41,
+      "conscientiousness": 42
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2354",
+    "suitability_score": 46.8,
+    "skill_scores": {
+      "big_data_skills": 3.4,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 32,
+      "extraversion": 59,
+      "openness_to_experience": 58,
+      "agreeableness": 51,
+      "conscientiousness": 60
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3265",
+    "suitability_score": 49.4,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 4.7,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 49,
+      "extraversion": 45,
+      "openness_to_experience": 40,
+      "agreeableness": 50,
+      "conscientiousness": 58
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3546",
+    "suitability_score": 41.4,
+    "skill_scores": {
+      "big_data_skills": 4.4,
+      "maths-stats_skills": 2.8,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 3.9,
+      "dashboard_and_storytelling_skills": 4.6
+    },
+    "personality_scores": {
+      "neuroticism": 40,
+      "extraversion": 26,
+      "openness_to_experience": 31,
+      "agreeableness": 36,
+      "conscientiousness": 43
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3774",
+    "suitability_score": 47.6,
+    "skill_scores": {
+      "big_data_skills": 4.4,
+      "maths-stats_skills": 5,
+      "coding_skills": 4.4,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 42,
+      "extraversion": 45,
+      "openness_to_experience": 44,
+      "agreeableness": 46,
+      "conscientiousness": 54
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3771",
+    "suitability_score": 40.0,
+    "skill_scores": {
+      "big_data_skills": 2.6,
+      "maths-stats_skills": 5,
+      "coding_skills": 3.3,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 4.1
+    },
+    "personality_scores": {
+      "neuroticism": 23,
+      "extraversion": 47,
+      "openness_to_experience": 45,
+      "agreeableness": 62,
+      "conscientiousness": 38
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3381",
+    "suitability_score": 42.0,
+    "skill_scores": {
+      "big_data_skills": 3,
+      "maths-stats_skills": 4.9,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 3.1
+    },
+    "personality_scores": {
+      "neuroticism": 27,
+      "extraversion": 46,
+      "openness_to_experience": 24,
+      "agreeableness": 64,
+      "conscientiousness": 25
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2084",
+    "suitability_score": 47.2,
+    "skill_scores": {
+      "big_data_skills": 3.6,
+      "maths-stats_skills": 5,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 34,
+      "extraversion": 47,
+      "openness_to_experience": 49,
+      "agreeableness": 52,
+      "conscientiousness": 53
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3980",
+    "suitability_score": 47.8,
+    "skill_scores": {
+      "big_data_skills": 4,
+      "maths-stats_skills": 4.9,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 36,
+      "extraversion": 47,
+      "openness_to_experience": 54,
+      "agreeableness": 52,
+      "conscientiousness": 51
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2420",
+    "suitability_score": 35.0,
+    "skill_scores": {
+      "big_data_skills": 4.1,
+      "maths-stats_skills": 2.8,
+      "coding_skills": 2.3,
+      "ai_and_ml_skills": 4.4,
+      "dashboard_and_storytelling_skills": 3.9
+    },
+    "personality_scores": {
+      "neuroticism": 37,
+      "extraversion": 22,
+      "openness_to_experience": 33,
+      "agreeableness": 38,
+      "conscientiousness": 35
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3164",
+    "suitability_score": 44.6,
+    "skill_scores": {
+      "big_data_skills": 4.8,
+      "maths-stats_skills": 5,
+      "coding_skills": 2.5,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 42,
+      "extraversion": 61,
+      "openness_to_experience": 30,
+      "agreeableness": 53,
+      "conscientiousness": 51
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2010",
+    "suitability_score": 42.6,
+    "skill_scores": {
+      "big_data_skills": 3.6,
+      "maths-stats_skills": 4,
+      "coding_skills": 3.9,
+      "ai_and_ml_skills": 4.8,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 19,
+      "extraversion": 57,
+      "openness_to_experience": 46,
+      "agreeableness": 52,
+      "conscientiousness": 57
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "2097",
+    "suitability_score": 45.6,
+    "skill_scores": {
+      "big_data_skills": 5,
+      "maths-stats_skills": 3.8,
+      "coding_skills": 4.6,
+      "ai_and_ml_skills": 5,
+      "dashboard_and_storytelling_skills": 4.4
+    },
+    "personality_scores": {
+      "neuroticism": 39,
+      "extraversion": 46,
+      "openness_to_experience": 47,
+      "agreeableness": 50,
+      "conscientiousness": 50
+    },
+    "flagged_vulnerabilities": []
+  },
+  {
+    "candidate_id": "3497",
+    "suitability_score": 44.2,
+    "skill_scores": {
+      "big_data_skills": 4.1,
+      "maths-stats_skills": 3.8,
+      "coding_skills": 5,
+      "ai_and_ml_skills": 4.2,
+      "dashboard_and_storytelling_skills": 5
+    },
+    "personality_scores": {
+      "neuroticism": 44,
+      "extraversion": 46,
+      "openness_to_experience": 43,
+      "agreeableness": 39,
+      "conscientiousness": 52
+    },
+    "flagged_vulnerabilities": []
+  }
+]
