@@ -83,12 +83,12 @@ def _to_candidate(row: pd.Series) -> CandidateSuitability:
         for column, score in scores.items()
         if score < STRENGTH_THRESHOLD
     ]
-    suitability_score = round(sum(scores.values()) / len(scores) * 20)
+    suitability_score = sum(scores.values()) / len(scores) * 10
 
     return CandidateSuitability(
         candidate_id=_candidate_id(row["id"]),
         name=f"Candidate {_candidate_id(row['id'])}",
-        suitability_score=min(100, max(1, suitability_score)),
+        suitability_score=round(min(100, max(0, suitability_score)), 2),
         strengths=strengths,
         weaknesses=weaknesses,
     )

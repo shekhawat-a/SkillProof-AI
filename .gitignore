@@ -1,0 +1,13 @@
+# Python & Environment
+venv/
+__pycache__/
+*.py[cod]
+.env
+
+# Data Files (Taki Excel/CSV git par push na ho)
+backend/app/data/*.xlsx
+backend/app/data/*.csv
+
+# OS files
+.DS_Store
+Thumbs.db

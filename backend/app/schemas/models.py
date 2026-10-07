@@ -8,9 +8,9 @@ from pydantic import BaseModel, Field
 class CandidateSuitability(BaseModel):
     candidate_id: str
     name: str
-    suitability_score: int = Field(..., ge=1, le=100)
-    strengths: list[str] = []
-    weaknesses: list[str] = []
+    suitability_score: float = Field(..., ge=0, le=100)
+    strengths: list[str] = Field(default_factory=list)
+    weaknesses: list[str] = Field(default_factory=list)
 
 
 class SkillStatus(BaseModel):
@@ -26,26 +26,54 @@ class SkillGapResponse(BaseModel):
     skills: list[SkillStatus]
 
 
-# ---------- Interview / Chat ----------
+# ---------- Interviews ----------
 class StartInterviewRequest(BaseModel):
     candidate_id: str
-    job_id: str
+    interview_type: Literal["technical", "behavioral"] = "technical"
 
 
-class QuestionResponse(BaseModel):
-    session_id: str
-    question_id: str
-    question_text: str
-    target_skill: str
+class InterviewQuestion(BaseModel):
+    question_id: int
+    question_type: Literal[
+        "true_premise",
+        "false_premise_trap",
+        "open_ended",
+        "behavioral_pressure",
+    ]
+    prompt_text: str
+    is_trap: bool
+    targeted_trait: str
+
+
+class GeneratedInterviewResponse(BaseModel):
+    candidate_id: str
+    strong_trait: str
+    weak_trait: str
+    questions: list[InterviewQuestion]
+
+
+class InterviewStartResponse(BaseModel):
+    status: Literal["success"]
+    data: GeneratedInterviewResponse
 
 
 class SubmitAnswerRequest(BaseModel):
-    session_id: str
-    question_id: str
-    candidate_response: str
+    original_question: str
+    candidate_answer: str
+    attempt_number: Literal[1, 2]
 
 
 class EvaluationResponse(BaseModel):
-    status: Literal["Passed", "Red Flag"]
-    reason: str
-    hallucination_detected: bool
+    status: Literal["VERIFIED", "FLAGGED", "FOLLOW_UP", "HUMAN_REVIEW"]
+    reasoning: str
+    next_ai_reply: str
+
+
+class InterviewAnswerResponse(BaseModel):
+    status: Literal["success"]
+    evaluation: EvaluationResponse
+
+
+class InterviewCandidatesResponse(BaseModel):
+    interview_type: Literal["technical", "behavioral"]
+    candidates: list[str]

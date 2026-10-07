@@ -9,22 +9,14 @@ from __future__ import annotations
 import json
 import logging
 import os
-from typing import Literal
 
 from dotenv import load_dotenv
 from groq import Groq
-from pydantic import BaseModel
+
+from app.schemas.models import EvaluationResponse
 
 load_dotenv()
 logger = logging.getLogger(__name__)
-
-# ==========================================
-# PYDANTIC SCHEMAS
-# ==========================================
-class EvaluationResponse(BaseModel):
-    status: Literal["VERIFIED", "FLAGGED", "FOLLOW_UP", "HUMAN_REVIEW"]
-    reasoning: str
-    next_ai_reply: str
 
 _client: Groq | None = None
 

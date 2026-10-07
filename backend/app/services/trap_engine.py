@@ -10,12 +10,13 @@ import json
 import logging
 import os
 from pathlib import Path
-from typing import Any, List, Literal
+from typing import Any
 
 import pandas as pd
 from dotenv import load_dotenv
 from groq import Groq
-from pydantic import BaseModel, ValidationError
+
+from app.schemas.models import GeneratedInterviewResponse
 
 load_dotenv()
 
@@ -43,21 +44,10 @@ NON_FEATURE_COLUMNS = {
 
 _client: Groq | None = None
 
-# ==========================================
-# PYDANTIC SCHEMAS
-# ==========================================
-class Question(BaseModel):
-    question_id: int
-    question_type: Literal["true_premise", "false_premise_trap", "open_ended", "behavioral_pressure"]
-    prompt_text: str
-    is_trap: bool
-    targeted_trait: str
 
-class InterviewOutput(BaseModel):
-    candidate_id: str
-    strong_trait: str
-    weak_trait: str
-    questions: List[Question]
+class CandidateNotFoundError(ValueError):
+    """Raised when a candidate ID is absent from the selected dataset."""
+
 
 # ==========================================
 # CORE LOGIC
@@ -78,6 +68,25 @@ def _resolve_id_column(columns: pd.Index) -> str | None:
         if name in normalized:
             return str(normalized[name])
     return None
+
+
+def list_candidate_ids(data_path: Path) -> list[str]:
+    """Return the available candidate IDs from an interview dataset."""
+    if not data_path.is_file():
+        raise FileNotFoundError(f"Dataset not found at {data_path}")
+
+    try:
+        df = pd.read_excel(data_path, engine="openpyxl")
+    except Exception as exc:
+        raise ValueError(f"Failed to read Excel file {data_path}: {exc}") from exc
+
+    id_column = _resolve_id_column(df.columns)
+    if id_column is None:
+        raise ValueError(f"Missing ID column in {data_path.name}")
+
+    ids = df[id_column].dropna().astype(str).str.replace(r"\.0$", "", regex=True).str.strip()
+    return ids[ids.ne("")].drop_duplicates().tolist()
+
 
 def load_candidate_profile(candidate_id: str, data_path: Path) -> tuple[str, str]:
     """Loads an Excel file, finds the candidate, and returns their highest and lowest scoring traits."""
@@ -104,7 +113,9 @@ def load_candidate_profile(candidate_id: str, data_path: Path) -> tuple[str, str
     matches = df[normalized_ids == candidate_id]
     
     if matches.empty:
-        raise ValueError(f"Candidate '{candidate_id}' not found in {data_path.name}")
+        raise CandidateNotFoundError(
+            f"Candidate '{candidate_id}' not found in {data_path.name}"
+        )
 
     candidate_row = matches.iloc[0]
     
@@ -128,7 +139,7 @@ def load_candidate_profile(candidate_id: str, data_path: Path) -> tuple[str, str
     return strong_trait, weak_trait
 
 
-def _call_groq(system_prompt: str, user_prompt: str) -> InterviewOutput:
+def _call_groq(system_prompt: str, user_prompt: str) -> GeneratedInterviewResponse:
     client = _get_client()
     for model_index, model in enumerate(GROQ_MODELS):
         try:
@@ -142,7 +153,7 @@ def _call_groq(system_prompt: str, user_prompt: str) -> InterviewOutput:
                 temperature=0.2, 
             )
             raw_text = response.choices[0].message.content
-            return InterviewOutput.model_validate_json(raw_text)
+            return GeneratedInterviewResponse.model_validate_json(raw_text)
         except Exception as exc:
             logger.warning(f"Groq model {model} failed: {exc}")
             if model_index == len(GROQ_MODELS) - 1:
@@ -156,10 +167,13 @@ def generate_technical_trap(candidate_id: str) -> dict[str, Any]:
     """Generates a Technical Skills interview using the JDS dataset."""
     try:
         strong, weak = load_candidate_profile(candidate_id, JDS_FILE_PATH)
+    except CandidateNotFoundError as exc:
+        return {"error": str(exc), "error_code": "candidate_not_found"}
     except Exception as exc:
-        return {"error": str(exc)}
+        logger.exception("Unable to load technical interview profile for %s", candidate_id)
+        return {"error": str(exc), "error_code": "dataset_error"}
 
-    schema_str = json.dumps(InterviewOutput.model_json_schema(), indent=2)
+    schema_str = json.dumps(GeneratedInterviewResponse.model_json_schema(), indent=2)
     system_prompt = f"You are a strict Technical Recruiter. Output ONLY valid JSON matching this schema:\n{schema_str}"
     
     user_prompt = f"""
@@ -176,17 +190,24 @@ def generate_technical_trap(candidate_id: str) -> dict[str, Any]:
     try:
         return _call_groq(system_prompt, user_prompt).model_dump()
     except Exception as exc:
-        return {"error": f"Failed to generate technical trap: {exc}"}
+        logger.exception("Unable to generate technical interview for %s", candidate_id)
+        return {
+            "error": f"Failed to generate technical trap: {exc}",
+            "error_code": "upstream_error",
+        }
 
 
 def generate_behavioral_trap(candidate_id: str) -> dict[str, Any]:
     """Generates a Personality/Behavioral interview using the SDS dataset."""
     try:
         strong, weak = load_candidate_profile(candidate_id, SDS_FILE_PATH)
+    except CandidateNotFoundError as exc:
+        return {"error": str(exc), "error_code": "candidate_not_found"}
     except Exception as exc:
-        return {"error": str(exc)}
+        logger.exception("Unable to load behavioral interview profile for %s", candidate_id)
+        return {"error": str(exc), "error_code": "dataset_error"}
 
-    schema_str = json.dumps(InterviewOutput.model_json_schema(), indent=2)
+    schema_str = json.dumps(GeneratedInterviewResponse.model_json_schema(), indent=2)
     system_prompt = f"You are an elite Behavioral Psychologist/HR Recruiter. Output ONLY valid JSON matching this schema:\n{schema_str}"
     
     user_prompt = f"""
@@ -203,7 +224,11 @@ def generate_behavioral_trap(candidate_id: str) -> dict[str, Any]:
     try:
         return _call_groq(system_prompt, user_prompt).model_dump()
     except Exception as exc:
-        return {"error": f"Failed to generate behavioral trap: {exc}"}
+        logger.exception("Unable to generate behavioral interview for %s", candidate_id)
+        return {
+            "error": f"Failed to generate behavioral trap: {exc}",
+            "error_code": "upstream_error",
+        }
 
 
 if __name__ == "__main__":
